@@ -14,13 +14,9 @@ endif
 
 " 针对不同的使用环境进行具体配置
 if g:atCompany
-    " set tags+=D:/Ruchee/Files/code/wuyun/kernel/tags
-    " set tags+=D:/Ruchee/Files/code/wuyun/bg/tags
-    set tags+=D:/Ruchee/Files/code/baofeng/baofeng_game/tags
-
-    set tags+=D:/Ruchee/Files/code/self/thinkphp/tags
+    set tags+=D:/Workspace/tags
 else
-    set tags+=~/code/fms/thinkphp/tags
+    set tags+=~/Workspace/tags
 endif
 
 
@@ -468,7 +464,7 @@ let Tlist_Use_Right_Window     = 1             " 在右侧窗口中显示
 let Tlist_File_Fold_Auto_Close = 1             " 自动折叠
 
 " snipMate            Tab智能补全
-let g:snips_author = 'Ruchee'
+let g:snips_author = 'Ovine'
 if g:isWIN
     let g:snippets_dir = $VIM.'/snippets/'
 else
@@ -736,3 +732,8 @@ endfunc
 imap <leader>rr <ESC>:call Compile_Run_Code()<CR>
 nmap <leader>rr :call Compile_Run_Code()<CR>
 vmap <leader>rr <ESC>:call Compile_Run_Code()<CR>
+
+" 添加作者信息
+let g:vimrc_author='Bigpao' 
+let g:vimrc_email='bigpao.luo@gmail.com' 
+let g:vimrc_homepage=''
