@@ -11,3 +11,5 @@
 4. 在家目录中新建.fonts目录,将字体放到.fonts目录即可
 
 
+###采用pathogen方式管理插件###
+1. 可在vim官方站点下载插件包,放到/vimfiles/bundle目录下,重启vim即可
