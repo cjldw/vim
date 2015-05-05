@@ -737,3 +737,9 @@ vmap <leader>rr <ESC>:call Compile_Run_Code()<CR>
 let g:vimrc_author='Bigpao' 
 let g:vimrc_email='bigpao.luo@gmail.com' 
 let g:vimrc_homepage=''
+
+" 添加php命名空间插件映射
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+noremap <Leader>e :call PhpExpandClass()<CR>
