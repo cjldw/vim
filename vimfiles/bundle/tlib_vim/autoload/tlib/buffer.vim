@@ -303,7 +303,11 @@ function! tlib#buffer#InsertText(text, ...) "{{{3
 			" " This doesn't work because it's not guaranteed that the 
 			" " cursor is set.
 			" let cline = getline('.')
+<<<<<<< HEAD
 			" norm! a
+=======
+			" norm! a
+>>>>>>> 713be7a529d40940a5efc0af49733f91fa924180
 			" "norm! o
 			" " TAssertExec redraw | sleep 3
 			" let idt = strpart(getline('.'), 0, col('.') + shift)
