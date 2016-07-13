@@ -206,6 +206,8 @@ else
 endif
 
 
+set colorcolumn=105            " 添加80字符预警线
+
 " set backspace=2              " 设置退格键可用
 set bs=2
 "set backspace=indent,eol,start
@@ -736,7 +738,4 @@ noremap <Leader>e :call PhpExpandClass()<CR>
 " 添加easytags plugin配置文件 useless
 set tags=./tags;,tags
 
-" 添加80字符预警线
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
 
