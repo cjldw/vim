@@ -1,3 +1,4 @@
+" ctags.exe --recurse --language-force=PHP --PHP-kinds=cfid --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i" .
 " ---------- KeyMaps ----------
 " ---------- Ctrl系按键 ----------
 "
@@ -197,14 +198,17 @@ au BufRead,BufNewFile *.ini      setlocal ft=dosini
 " 设置着色模式和字体
 if g:isWIN
     colorscheme molokai
-    set guifont=Monaco:h9
+    "set guifont=Monaco:h9
+    set guifont=Source\ Code\ Pro:h10
 else
     colorscheme molokai
     set guifont=Monaco:9
 endif
 
 
-set backspace=2              " 设置退格键可用
+" set backspace=2              " 设置退格键可用
+set bs=2
+"set backspace=indent,eol,start
 set autoindent               " 自动对齐
 set ai!                      " 设置自动缩进
 set smartindent              " 智能自动缩进
@@ -318,6 +322,10 @@ au FileType scala      call AddScalaDict()
 au FileType javascript call AddJavaScriptDict()
 au FileType css        call AddCSSDict()
 
+
+" 设置PHP AutoComplete Plugin"
+au FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+
 function AddCDict()
     if g:isWIN
         set dict+=$VIM/vimfiles/dict/c.txt
@@ -423,6 +431,8 @@ function AddCSSDict()
     set complete+=k
 endfunction
 
+" 添加php autocomplete plugin composer command"
+" let g:phpcomplete_index_composer_command = "php C:/ProgramData/ComposerSetup/bin/composer.phar dumpautoload --optimize"
 
 " 开启部分语法高亮的非默认特性
 let g:go_auto_type_info      = 0               " 关闭Go语言自动显示类型信息（默认就是关闭的，此处用于方便需要时开启）
@@ -443,7 +453,7 @@ let Tlist_Use_Right_Window     = 1             " 在右侧窗口中显示
 let Tlist_File_Fold_Auto_Close = 1             " 自动折叠
 
 " snipMate            Tab智能补全
-let g:snips_author = 'Ovine'
+let g:snips_author = 'arvim.lo'
 if g:isWIN
     let g:snippets_dir = $VIM.'/snippets/'
 else
@@ -724,8 +734,9 @@ inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
 
 " 添加easytags plugin配置文件 useless
-" let g:easytags_file = '~/tags'
-" let g:easytags_dynamic_files = 1
-" let g:easytags_include_members = 1
-" set tags=./tags;,tags
+set tags=./tags;,tags
+
+" 添加80字符预警线
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
