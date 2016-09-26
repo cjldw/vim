@@ -1,39 +1,4 @@
-<<<<<<< HEAD
-source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
 
-set diffexpr=MyDiff()
-function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      if empty(&shellxquote)
-        let l:shxq_sav = ''
-        set shellxquote&
-      endif
-      let cmd = '"' . $VIMRUNTIME . '\diff"'
-    else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3
-  if exists('l:shxq_sav')
-    let &shellxquote=l:shxq_sav
-  endif
-endfunction
-
-=======
 " ctags.exe --recurse --language-force=PHP --PHP-kinds=cfid --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i" .
 " ---------- KeyMaps ----------
 " ---------- Ctrl系按键 ----------
@@ -58,7 +23,8 @@ endfunction
 "
 " \rr                        --一键编译&&运行         [全模式可用]
 " \rb                        --一键去除所有尾部空白   [全模式可用]
-" \rm                        --一键去除字符         [全模式可用]
+" \rm                        --一键去除
+字符         [全模式可用]
 " \rt                        --一键替换全部Tab为空格  [全模式可用]
 "
 " \nt                        --打开NERDTree文件树窗口
@@ -606,7 +572,8 @@ imap <leader>rb <ESC>:let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 nmap <leader>rb :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 vmap <leader>rb <ESC>:let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" \rm                 一键去除字符
+" \rm                 一键去除
+字符
 imap <leader>rm <ESC>:%s/<c-v><c-m>//g<CR>
 nmap <leader>rm :%s/<c-v><c-m>//g<CR>
 vmap <leader>rm <ESC>:%s/<c-v><c-m>//g<CR>
@@ -773,6 +740,3 @@ noremap <Leader>e :call PhpExpandClass()<CR>
 
 " 添加easytags plugin配置文件 useless
 set tags=./tags;,tags
-
-
->>>>>>> 414fa663790fa1d35ffb9aa089772e299546cc93
