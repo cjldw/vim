@@ -171,11 +171,6 @@ else
     let g:isGUI = 0
 endif
 
-
-" 设置通用缩进策略
-set shiftwidth=4
-set tabstop=4
-
 " 对部分语言设置单独的缩进
 au FileType groovy,scala,clojure,scheme,racket,lisp,lua,ruby,eruby,slim,elixir,julia,dart,coffee,jade,sh set shiftwidth=2
 au FileType groovy,scala,clojure,scheme,racket,lisp,lua,ruby,eruby,slim,elixir,julia,dart,coffee,jade,sh set tabstop=2
@@ -206,11 +201,16 @@ else
 endif
 
 
+
+" 设置通用缩进策略
+set shiftwidth=4
+set tabstop=4
+
 set colorcolumn=105            " 添加80字符预警线
 
 " set backspace=2              " 设置退格键可用
-set bs=2
-"set backspace=indent,eol,start
+" set bs=2
+set backspace=indent,eol,start
 set autoindent               " 自动对齐
 set ai!                      " 设置自动缩进
 set smartindent              " 智能自动缩进
@@ -727,7 +727,7 @@ vmap <leader>rr <ESC>:call Compile_Run_Code()<CR>
 " 添加作者信息
 let g:vimrc_author='luowen' 
 let g:vimrc_email='bigpao.luo@gmail.com' 
-let g:vimrc_homepage=''
+let g:vimrc_homepage='https://vvotm.githu.io'
 
 " 添加php命名空间插件映射
 inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
