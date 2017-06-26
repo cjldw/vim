@@ -234,7 +234,7 @@ set noswapfile               " 不生成交换文件
 set list                     " 显示特殊字符，其中Tab使用高亮~代替，尾部空白使用高亮点号代替
 set listchars=tab:\~\ ,trail:.
 set expandtab                " 将Tab自动转化成空格 [需要输入真正的Tab键时，使用 Ctrl+V + Tab]
-"set showmatch               " 显示括号配对情况
+set showmatch               " 显示括号配对情况
 "set nowrap                  " 设置不自动换行
 
 syntax enable                " 打开语法高亮
@@ -455,7 +455,7 @@ let Tlist_Use_Right_Window     = 1             " 在右侧窗口中显示
 let Tlist_File_Fold_Auto_Close = 1             " 自动折叠
 
 " snipMate            Tab智能补全
-let g:snips_author = 'arvim.lo'
+let g:snips_author = 'luwoen'
 if g:isWIN
     let g:snippets_dir = $VIM.'/snippets/'
 else
@@ -728,12 +728,5 @@ vmap <leader>rr <ESC>:call Compile_Run_Code()<CR>
 let g:vimrc_author='luowen' 
 let g:vimrc_email='bigpao.luo@gmail.com' 
 let g:vimrc_homepage='https://vvotm.githu.io'
-
-" 添加php命名空间插件映射
-inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
-inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
-noremap <Leader>e :call PhpExpandClass()<CR>
-
 " 添加easytags plugin配置文件 useless
 set tags=./tags;,tags
