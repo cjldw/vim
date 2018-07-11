@@ -22,7 +22,7 @@
 "
 " \rr                        --一键编译&&运行         [全模式可用]
 " \rb                        --一键去除所有尾部空白   [全模式可用]
-" \rm                        --一键去除字符         [全模式可用]
+" \rm                        --一键去除 字符          [全模式可用]
 " \rt                        --一键替换全部Tab为空格  [全模式可用]
 "
 " \nt                        --打开NERDTree文件树窗口
@@ -570,7 +570,7 @@ imap <leader>rb <ESC>:let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 nmap <leader>rb :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 vmap <leader>rb <ESC>:let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" \rm                 一键去除字符
+" \rm                 一键去除 字符
 imap <leader>rm <ESC>:%s/<c-v><c-m>//g<CR>
 nmap <leader>rm :%s/<c-v><c-m>//g<CR>
 vmap <leader>rm <ESC>:%s/<c-v><c-m>//g<CR>
