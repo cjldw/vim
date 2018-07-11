@@ -509,8 +509,8 @@ let g:used_javascript_libs = 'jquery,angularjs'
 " ======= 自定义快捷键 ======= "
 
 " Ctrl + H            光标移当前行行首[插入模式]、切换左窗口[Normal模式]
-imap <c-h> <ESC>I
-map <c-h> <c-w><c-h>
+" imap <c-h> <ESC>I
+" map <c-h> <c-w><c-h>
 
 " Ctrl + J            光标移下一行行首[插入模式]、切换下窗口[Normal模式]
 imap <c-j> <ESC><Down>I
@@ -727,6 +727,6 @@ vmap <leader>rr <ESC>:call Compile_Run_Code()<CR>
 " 添加作者信息
 let g:vimrc_author='luowen' 
 let g:vimrc_email='bigpao.luo@gmail.com' 
-let g:vimrc_homepage='https://vvotm.githu.io'
+let g:vimrc_homepage='https://loovien.githu.io'
 " 添加easytags plugin配置文件 useless
 set tags=./tags;,tags
