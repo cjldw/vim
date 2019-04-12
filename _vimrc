@@ -193,11 +193,11 @@ au BufRead,BufNewFile *.ini      setlocal ft=dosini
 " 设置着色模式和字体
 if g:isWIN
     colorscheme molokai
-    set guifont=Monaco:h9
+    set guifont=Monaco:h8
     "set guifont=Source\ Code\ Pro:h10
 else
     colorscheme molokai
-    set guifont=Monaco:9
+    set guifont=Monaco:8
 endif
 
 
