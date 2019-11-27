@@ -493,10 +493,10 @@ let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
 let g:airline_theme = 'badwolf'                " 设置主题
 
 " Syntastic           语法检查
-let g:syntastic_check_on_open = 1              " 默认开启
+let g:syntastic_check_on_open = 0              " 默认开启
 let g:syntastic_mode_map      = {'mode': 'active',
             \'active_filetypes':  [],
-            \'passive_filetypes': ['html', 'css', 'xhtml', 'go', 'groovy', 'scala', 'clojure', 'racket', 'eruby', 'slim', 'jade', 'scss', 'less']
+            \'passive_filetypes': ['html', 'css', 'xhtml', 'go', 'groovy', 'scala', 'clojure', 'racket', 'eruby', 'slim', 'jade', 'scss', 'less', "dart"]
             \}                                 " 指定不需要检查的语言 [主要是因为开启这些语言的语法检查会妨碍到正常的工作]
 " 自定义编译器和编译参数
 let g:syntastic_c_compiler = 'gcc'
@@ -728,7 +728,7 @@ vmap <leader>rr <ESC>:call Compile_Run_Code()<CR>
 
 " 添加作者信息
 let g:vimrc_author='luowen' 
-let g:vimrc_email='bigpao.luo@gmail.com' 
-let g:vimrc_homepage='https://loovien.githu.io'
+let g:vimrc_email='loovien@163.com' 
+let g:vimrc_homepage='https://loovien.github.io'
 " 添加easytags plugin配置文件 useless
 set tags=./tags;,tags

@@ -16,16 +16,6 @@ Looking for an IDE experience? See the [Dart Tools][] page.
 
 ## Commands
 
-You can use following vim commands:
-
-### :Dart2Js
-
-![](https://raw.github.com/dart-lang/dart-vim-plugin/master/Dart2Js.gif)
-
-### :DartAnalyzer
-
-![](https://raw.github.com/dart-lang/dart-vim-plugin/master/DartAnalyzer.gif)
-
 ### :DartFmt
 
 ![](https://raw.github.com/dart-lang/dart-vim-plugin/master/DartFmt.gif)
@@ -83,6 +73,9 @@ dart_html_in_string=v:true` (default false).
 
 Disable highlighting of core library classes with `let
 dart_corelib_highlight=v:false` (default true).
+
+Disable highlighting of user defined types (words starting with a capital
+letter) with `let dart_highlight_types=v:false` (default true).
 
 Enable Dart style guide syntax (like 2-space indentation) with `let dart_style_guide = 2`
 
