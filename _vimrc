@@ -196,10 +196,15 @@ if g:isWIN
     " set guifont=Source\ Code\ Pro:h9
     " set guifont=Monaco:h8
     " set guifont=Monaco:h8
-    set guifont=Monaco:h7.8
+    set guifont=Cascadia_Mono:h9:cANSI,\ Microsoft_Yahei:h12
+    " set guifont=Ubuntu_mono:h10,Microsoft_YaHei_UI:h10
+    " set guifont=Cascadia_Mono:h10:cDEFAULT
+    " set guifont=Microsoft_Yahei:h12
 else
     colorscheme molokai
-    set guifont=Monaco:h8
+    " set guifont=Monaco:h8
+    " "set guifont=Cascadia\ Mono:h9:cANSI
+    " "set guifont=Cascadia\ Mono:h9:cANSI
 endif
 
 
