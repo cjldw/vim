@@ -193,18 +193,13 @@ au BufRead,BufNewFile *.ini      setlocal ft=dosini
 " 设置着色模式和字体
 if g:isWIN
     colorscheme molokai
-    " set guifont=Source\ Code\ Pro:h9
-    " set guifont=Monaco:h8
-    " set guifont=Monaco:h8
-    set guifont=Cascadia_Mono:h9:cANSI,\ Microsoft_Yahei:h12
-    " set guifont=Ubuntu_mono:h10,Microsoft_YaHei_UI:h10
-    " set guifont=Cascadia_Mono:h10:cDEFAULT
-    " set guifont=Microsoft_Yahei:h12
+    set guifont=cascadia\ Mono:h8
+    "set guifont=Monaco:h8
+    "set guifont=Source\ Code\ Pro:h10
 else
     colorscheme molokai
-    " set guifont=Monaco:h8
-    " "set guifont=Cascadia\ Mono:h9:cANSI
-    " "set guifont=Cascadia\ Mono:h9:cANSI
+    set guifont=cascadia\ Mono:h8
+    "set guifont=Monaco:h8
 endif
 
 
@@ -332,9 +327,6 @@ au FileType javascript call AddJavaScriptDict()
 au FileType css        call AddCSSDict()
 
 
-" 设置PHP AutoComplete Plugin"
-au FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
-
 function AddCDict()
     if g:isWIN
         set dict+=$VIM/vimfiles/dict/c.txt
@@ -440,9 +432,6 @@ function AddCSSDict()
     set complete+=k
 endfunction
 
-" 添加php autocomplete plugin composer command"
-" let g:phpcomplete_index_composer_command = "php C:/ProgramData/ComposerSetup/bin/composer.phar dumpautoload --optimize"
-
 " 开启部分语法高亮的非默认特性
 let g:go_auto_type_info      = 0               " 关闭Go语言自动显示类型信息（默认就是关闭的，此处用于方便需要时开启）
 let g:go_def_mapping_enabled = 0               " 关闭Go语言对gd的绑定
@@ -462,7 +451,7 @@ let Tlist_Use_Right_Window     = 1             " 在右侧窗口中显示
 let Tlist_File_Fold_Auto_Close = 1             " 自动折叠
 
 " snipMate            Tab智能补全
-let g:snips_author = 'luwoen'
+let g:snips_author = 'luowen'
 if g:isWIN
     let g:snippets_dir = $VIM.'/snippets/'
 else
@@ -501,7 +490,7 @@ let g:airline_theme = 'badwolf'                " 设置主题
 let g:syntastic_check_on_open = 0              " 默认开启
 let g:syntastic_mode_map      = {'mode': 'active',
             \'active_filetypes':  [],
-            \'passive_filetypes': ['html', 'css', 'xhtml', 'go', 'groovy', 'scala', 'clojure', 'racket', 'eruby', 'slim', 'jade', 'scss', 'less', "dart"]
+            \'passive_filetypes': ['html', 'css', 'xhtml', 'go', 'groovy', 'scala', 'clojure', 'racket', 'eruby', 'slim', 'jade', 'scss', 'less', 'dart']
             \}                                 " 指定不需要检查的语言 [主要是因为开启这些语言的语法检查会妨碍到正常的工作]
 " 自定义编译器和编译参数
 let g:syntastic_c_compiler = 'gcc'
@@ -733,7 +722,10 @@ vmap <leader>rr <ESC>:call Compile_Run_Code()<CR>
 
 " 添加作者信息
 let g:vimrc_author='luowen' 
-let g:vimrc_email='loovien@163.com' 
+let g:vimrc_email='bigwen.luo@gmail.com' 
 let g:vimrc_homepage='https://loovien.github.io'
+" table 兼容markdown模式
+let g:table_mode_corner='|'
+
 " 添加easytags plugin配置文件 useless
 set tags=./tags;,tags

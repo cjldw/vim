@@ -135,6 +135,8 @@ highlight default link dartMetadata        PreProc
 
 let b:current_syntax = "dart"
 let b:spell_options = "contained"
+let dart_html_in_string=v:true
+let dart_format_on_save = 0
 
 if g:main_syntax is# 'dart'
   unlet g:main_syntax

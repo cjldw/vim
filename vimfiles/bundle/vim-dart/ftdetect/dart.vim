@@ -1,4 +1,4 @@
-autocmd BufRead,BufNewFile *.dart set filetype=dart
+autocmd BufRead,BufNewFile *.dart setlocal filetype=dart
 
 function! s:DetectShebang()
   if did_filetype() | return | endif
